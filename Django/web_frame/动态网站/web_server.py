@@ -20,17 +20,20 @@ def f2():
 
 
 def f3():
-    conn = pymysql.connect(host='127.0.0.1', user='root', password='12345678', database='test')
+    """
+    动态页面, 从数据库中读取用户名和密码，替换掉html中的占位符，并返回html数据
+    """
+    conn = pymysql.connect(host='127.0.0.1', user='root', password='123456', database='djangotest')
     # 游标设置为字典类型
     cursor = conn.cursor(cursor=pymysql.cursors.DictCursor)
-    cursor.execute("select id, name from user")
+    cursor.execute("select id, username, password from userinfo")
     user_list = cursor.fetchall()
     cursor.close()
     conn.close()
     print(user_list)
     content_list = []
     for row in user_list:
-        tp = "<tr><td>%s</td><td>%s</td></tr>" % (row['id'], row['name'])
+        tp = "<tr><td>%s</td><td>%s</td><td>%s</td></tr>" % (row['id'], row['username'], row['password'])
         content_list.append(tp)
     content = "".join(content_list)
 
@@ -38,6 +41,7 @@ def f3():
     template = f.read()
     f.close()
 
+    # 模板渲染
     data = template.replace('@@content@@', content)
     return bytes(data, encoding='utf-8')
 
