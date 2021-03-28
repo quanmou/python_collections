@@ -41,16 +41,19 @@ def f3():
     template = f.read()
     f.close()
 
-    # 模板渲染
+    # 模板渲染(模板+数据）
     data = template.replace('@@content@@', content)
     return bytes(data, encoding='utf-8')
 
 
 def f4():
-    conn = pymysql.connect(host='127.0.0.1', user='root', password='12345678', database='test')
+    """
+    使用python的模板引擎Jinja2来实现模板渲染
+    """
+    conn = pymysql.connect(host='127.0.0.1', user='root', password='123456', database='djangotest')
     # 游标设置为字典类型
     cursor = conn.cursor(cursor=pymysql.cursors.DictCursor)
-    cursor.execute("select id, name from user")
+    cursor.execute("select id, username, password from userinfo")
     user_list = cursor.fetchall()
     cursor.close()
     conn.close()
