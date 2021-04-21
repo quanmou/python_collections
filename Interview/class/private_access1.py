@@ -2,10 +2,10 @@ class Test:
     __name = "scolia"
 
     def a(self):
-        print self.__name
+        print(self.__name)
 
 a = Test()
 a.a()
 
-print Test.__name
-print a.__name
+print(Test.__name)
+print(a.__name)
