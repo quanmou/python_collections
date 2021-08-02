@@ -12,3 +12,10 @@ class MyspiderItem(scrapy.Item):
     name = scrapy.Field()
     title = scrapy.Field()
     info = scrapy.Field()
+
+
+class ItcastItem(scrapy.Item):
+    # define the fields for your item here like:
+    name = scrapy.Field()
+    title = scrapy.Field()
+    info = scrapy.Field()
