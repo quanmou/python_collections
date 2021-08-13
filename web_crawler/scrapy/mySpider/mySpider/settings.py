@@ -65,6 +65,9 @@ ROBOTSTXT_OBEY = True
 #ITEM_PIPELINES = {
 #    'mySpider.pipelines.MyspiderPipeline': 300,
 #}
+ITEM_PIPELINES = {
+   'mySpider.pipelines.TxtPipeline': 300,
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html
