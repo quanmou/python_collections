@@ -66,7 +66,7 @@ ROBOTSTXT_OBEY = True
 #    'mySpider.pipelines.MyspiderPipeline': 300,
 #}
 ITEM_PIPELINES = {
-   'mySpider.pipelines.TxtPipeline': 300,
+   'mySpider.pipelines.MongoPipeline': 300,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
