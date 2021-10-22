@@ -119,6 +119,20 @@ def plot_stack():
     plt.show()
 
 
+def plot_scatter():
+    """绘制散点图"""
+    x = np.array([1, 2, 3, 4, 5, 6, 7, 8])
+    y = np.array([1, 4, 9, 16, 7, 11, 23, 18])
+    sizes = np.array([20, 50, 100, 200, 500, 1000, 60, 90])  # 点大小
+    # colors = np.array(["red", "green", "black", "orange", "purple", "beige", "cyan", "magenta"])  # 点颜色
+    # plt.scatter(x, y, s=sizes, c=colors, alpha=0.5)
+    colors = np.array([0, 10, 30, 40, 60, 70, 90, 100])  # 使用颜色条
+    plt.scatter(x, y, s=sizes, c=colors, cmap='viridis', alpha=1)  # alpha是透明程度，1最高
+    plt.title("Scatter")
+    plt.colorbar()  # 显示颜色条
+    plt.show()
+
+
 def plot_pie():
     """绘制饼状图"""
     slices = [7, 2, 2, 13]
@@ -184,6 +198,7 @@ if __name__ == "__main__":
     # plot_bar()
     # plot_histogram()
     # plot_stack()
+    plot_scatter()
     # plot_pie()
     # plot_animation()
-    plot_3d()
+    # plot_3d()
