@@ -21,8 +21,8 @@ def sample1():
 
 
 def sample2():
-    """设置画线的style，包括点的样式和颜色，--代表虚线，o代表点标记为o，b代表blue"""
-    plt.plot(x, y, linestyle='--', marker="o", color="b")
+    """设置画线的style，包括点的样式和颜色，--代表虚线，o代表点标记为o，ms是标记的大小，mec是标记外部颜色，mfc是标记内部颜色，b代表blue"""
+    plt.plot(x, y, linestyle='--', linewidth='2.5', marker="o", ms=12, mec='g', mfc='r', color="b")  # 颜色也可以用'#8FBC8F'
     plt.plot(x, y, ".b")
     plt.show()
 
