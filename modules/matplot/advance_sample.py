@@ -54,8 +54,16 @@ def plot_annotate():
     plt.show()
 
 
+def high_dpi():
+    """调整show的分辨率"""
+    plt.rcParams['figure.dpi'] = 300  # 通过设置rcParams的分辨率，提高show的图片分辨率
+    plt.plot((1, 2, 3), (4, 3, -1))
+    plt.show()
+
+
 if __name__ == "__main__":
     # plot_two_y_axis()
     # plot_ticks()
     # plot_grid()
-    plot_annotate()
+    # plot_annotate()
+    high_dpi()
