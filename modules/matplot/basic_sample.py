@@ -94,8 +94,8 @@ def plot_bar():
 def plot_histogram():
     """绘制直方图"""
     a = np.array([22, 87, 5, 43, 56, 73, 55, 54, 11, 20, 51, 5, 79, 31, 27])
-    np.histogram(a, bins=[0, 20, 40, 60, 80, 100])
-    hist, bins = np.histogram(a, bins=[0, 20, 40, 60, 80, 100])
+    # np.histogram(a, bins=[0, 20, 40, 60, 80, 100])
+    # hist, bins = np.histogram(a, bins=[0, 20, 40, 60, 80, 100])
     # print(hist, bins)
     plt.hist(a, bins=[0, 20, 40, 60, 80, 100])
     plt.title("histogram")
@@ -196,9 +196,9 @@ if __name__ == "__main__":
     # subplot1()
     # subplot2()
     # plot_bar()
-    # plot_histogram()
+    plot_histogram()
     # plot_stack()
-    plot_scatter()
+    # plot_scatter()
     # plot_pie()
     # plot_animation()
     # plot_3d()
