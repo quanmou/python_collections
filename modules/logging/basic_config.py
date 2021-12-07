@@ -12,7 +12,7 @@ import logging
 
 # 写到文件
 # LOG_FORMAT = "%(asctime)s - %(levelname)s - %(message)s"
-# logging.basicConfig(filename='my.log', level=logging.DEBUG, format=LOG_FORMAT)
+# logging.basicConfig(filename='my.log', 'filemode'='a', level=logging.DEBUG, format=LOG_FORMAT)
 #
 # logging.debug("This is a debug log.")
 # logging.info("This is a info log.")
