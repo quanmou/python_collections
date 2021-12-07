@@ -9,6 +9,12 @@ import logging
 # logging.error("This is a error log.")
 # logging.critical("This is a critical log.")
 
+# 换一种方式
+# logging.log(logging.DEBUG, "This is a debug log.")
+# logging.log(logging.INFO, "This is a info log.")
+# logging.log(logging.WARNING, "This is a warning log.")
+# logging.log(logging.ERROR, "This is a error log.")
+# logging.log(logging.CRITICAL, "This is a critical log.")
 
 # 写到文件
 # LOG_FORMAT = "%(asctime)s - %(levelname)s - %(message)s"
