@@ -1,0 +1,29 @@
+version: 1
+formatters:
+  simple:
+    format: "%(asctime)s - %(name)s - %(levelname)-8s - %(message)s"
+filters:
+  no_console_filter:
+    (): __main__.NoConsoleFilter
+handlers:
+  console:
+    class: logging.StreamHandler
+    level: DEBUG
+    formatter: simple
+    filters: [no_console_filter]
+    stream: ext://sys.stdout
+  console_err:
+    class: logging.handlers.RotatingFileHandler
+    level: INFO
+    filename: test.log
+    formatter: simple
+    maxBytes: 1024
+    backupCount: 3
+loggers:
+  simpleExample:
+    level: DEBUG
+    handlers: [console]
+    propagate: yes
+root:
+  level: DEBUG
+  handlers: [console_err]
