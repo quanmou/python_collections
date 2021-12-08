@@ -49,3 +49,11 @@ logger.info('info message')
 logger.warning('warning message')
 logger.error('error message')
 logger.critical('critical message')
+
+# 用exception记录异常的栈信息
+a = 'abc'
+try:
+    int(a)
+except Exception as e:
+    # logger.error(e)
+    logger.exception(e)
