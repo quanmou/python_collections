@@ -1,3 +1,6 @@
 # pip install mysql-connector
 pip install mysql-connector-python
 pip install pymysql
+locust==2.0.0
+Scrapy==2.5.0
+environs==9.3.3
