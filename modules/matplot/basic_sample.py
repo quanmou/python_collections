@@ -26,6 +26,12 @@ def sample2():
     plt.plot(x, y, ".b")
     plt.show()
 
+    
+def sample3():
+    """画垂直于坐标轴的直线"""
+    plt.axvline(2)  # 画出 x=2 这条垂直线
+    plt.axhline(1)  # 画出 y=1 这条水平线
+
 
 def plot_sin():
     """画sin曲线"""
